@@ -1,69 +1,90 @@
-# React + TypeScript + Vite
+# Questions Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Q&A game built with React, TypeScript, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+👉 [questions-game-snowy.vercel.app](https://questions-game-snowy.vercel.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React 19** — UI library
+- **TypeScript** — Type safety
+- **Vite** — Lightning-fast build tool
+- **Tailwind CSS v4** — Utility-first CSS framework
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📁 Folder Structure
+
+```
+questions-game/
+├── public/                # Static files (favicon, images, etc.)
+│   └── dataleon-favicon.png
+├── src/                   # Source code
+│   ├── App.tsx            # Main React component
+│   ├── index.css          # Tailwind CSS directives
+│   ├── main.tsx           # App entry point
+│   ├── data/
+│   │   └── questions.ts   # Questions and answers data
+│   └── assets/            # Static assets (e.g. logos)
+├── index.html             # Main HTML file
+├── package.json           # Project metadata and scripts
+├── tailwind.config.js     # Tailwind CSS config
+├── postcss.config.js      # PostCSS config
+├── tsconfig.json          # TypeScript base config
+├── tsconfig.app.json      # TypeScript config for app
+├── tsconfig.node.json     # TypeScript config for Node
+└── README.md              # This file
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚡ Getting Started
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Install dependencies**
+   ```bash
+   npm install
+   ```
+2. **Start the dev server**
+   ```bash
+   npm run dev
+   ```
+3. **Open your browser**
+   Go to [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🖌️ Customization
+
+- Edit questions and answers in `src/data/questions.ts`.
+- Update styles using Tailwind classes in your components.
+- Favicon is located at `public/dataleon-favicon.png` (Dataleon logo).
+
+---
+
+## 📦 Build for Production
+
+```bash
+npm run build
 ```
+
+The output will be in the `dist/` folder.
+
+---
+
+## 📝 Notes
+
+- Used React 19 and Tailwind CSS v4.1.
+- TypeScript strict mode enabled.
+- Deployed on Vercel: [questions-game-snowy.vercel.app](https://questions-game-snowy.vercel.app/)
+
+---
+
+## 👤 Author
+
+Félix Orain
