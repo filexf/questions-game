@@ -38,7 +38,13 @@ const App: React.FC = () => {
             </div>
           ) : (
             <div className="flex flex-col gap-4 justify-center items-center animate-fade-in">
-              <p className="flex justify-center text-2xl font-semibold text-blue-700 text-center">
+              <p
+                className={`flex justify-center text-2xl font-semibold text-center ${
+                  response === questionData.answers.yes
+                    ? "text-green-600"
+                    : "text-red-600"
+                }`}
+              >
                 {response}
               </p>
               <button
@@ -66,6 +72,10 @@ const App: React.FC = () => {
           )}
         </div>
       </div>
+      <footer className="w-full text-center py-6 text-gray-400 text-sm font-medium">
+        Made with <span className="mx-1">❤️</span> by Félix Orain using React,
+        Typescript and Tailwind
+      </footer>
     </div>
   );
 };
