@@ -27,6 +27,8 @@ questions-game/
 │   └── dataleon-favicon.png
 ├── src/                   # Source code
 │   ├── App.tsx            # Main React component
+│   ├── App.test.tsx       # Unit tests for App (Vitest)
+│   ├── setupTests.ts      # Test setup for Vitest/Testing Library
 │   ├── index.css          # Tailwind CSS directives
 │   ├── main.tsx           # App entry point
 │   ├── data/
@@ -44,18 +46,33 @@ questions-game/
 
 ---
 
-## ⚡ Getting Started
+## 🖥️ Installation & Local Launch
 
-1. **Install dependencies**
+1. **Clone the repository**
+   - **SSH**
+     ```bash
+     git clone git@github.com:filexf/questions-game.git
+     ```
+   - **HTTPS**
+     ```bash
+     git clone https://github.com/filexf/questions-game.git
+     ```
+     Ensuite, placez-vous dans le dossier du projet :
+   ```bash
+   cd questions-game
+   ```
+2. **Install dependencies**
    ```bash
    npm install
    ```
-2. **Start the dev server**
+3. **Start the development server**
    ```bash
    npm run dev
    ```
-3. **Open your browser**
+4. **Open your browser**
    Go to [http://localhost:5173](http://localhost:5173)
+
+You can now edit the code and see live updates!
 
 ---
 
@@ -81,6 +98,7 @@ The output will be in the `dist/` folder.
 
 - Used React 19 and Tailwind CSS v4.1.
 - TypeScript strict mode enabled.
+- **Unit tests are included using [Vitest](https://vitest.dev/).**
 - Deployed on Vercel: [questions-game-snowy.vercel.app](https://questions-game-snowy.vercel.app/)
 
 ---
