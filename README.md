@@ -6,7 +6,7 @@ A simple Q&A game built with React, TypeScript, Vite, and Tailwind CSS.
 
 ## 🚀 Live Demo
 
-👉 [questions-game-snowy.vercel.app](https://questions-game-snowy.vercel.app/)
+➡️ [questions-game-snowy.vercel.app](https://questions-game-snowy.vercel.app/)
 
 ---
 
